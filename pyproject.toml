@@ -1,0 +1,26 @@
+[project]
+name = "tiny-gpt-sinhala"
+version = "0.1.0"
+description = "A small GPT written from scratch in PyTorch and trained on Sinhala + English Wikipedia on an 8 GB M1"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "torch>=2.5",
+    "numpy>=2.0",
+    "pyarrow>=16",
+    "tokenizers>=0.20",
+    "huggingface-hub>=0.25",
+    "matplotlib>=3.9",
+    "pillow>=10",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

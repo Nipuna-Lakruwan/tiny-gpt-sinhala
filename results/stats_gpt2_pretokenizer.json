@@ -1,0 +1,15 @@
+{
+  "vocab": 8192,
+  "train_si_articles": 15373,
+  "train_si_tokens": 29566197,
+  "train_si_chars": 44990068,
+  "train_en_articles": 36592,
+  "train_en_tokens": 13094665,
+  "train_en_chars": 45020414,
+  "val_si_articles": 313,
+  "val_si_tokens": 551884,
+  "val_si_chars": 839645,
+  "val_en_articles": 746,
+  "val_en_tokens": 229186,
+  "val_en_chars": 810558
+}
