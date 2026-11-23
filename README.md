@@ -82,19 +82,27 @@ model's 256-token context covers about 2× more Sinhala, and every training step
 
 Scaled dot-product attention with a causal mask $M$ ($M_{ij} = -\infty$ for $j > i$):
 
-$$\text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}} + M\right)V$$
+```math
+\text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}} + M\right)V
+```
 
 One Transformer block (pre-LayerNorm):
 
-$$h = x + \text{MHA}(\text{LN}(x)), \qquad y = h + \text{MLP}(\text{LN}(h))$$
+```math
+h = x + \text{MHA}(\text{LN}(x)), \qquad y = h + \text{MLP}(\text{LN}(h))
+```
 
 Training objective, next-token cross-entropy:
 
-$$\mathcal L = -\frac{1}{T}\sum_{t=1}^{T} \log p_\theta(x_t \mid x_{<t})$$
+```math
+\mathcal L = -\frac{1}{T}\sum_{t=1}^{T} \log p_\theta(x_t \mid x_{<t})
+```
 
 Bits per character, used to compare the two languages fairly (they have different tokens per character):
 
-$$\text{bpc} = \frac{\mathcal L}{\ln 2} \cdot \frac{\#\text{tokens}}{\#\text{characters}}$$
+```math
+\text{bpc} = \frac{\mathcal L}{\ln 2} \cdot \frac{\#\text{tokens}}{\#\text{characters}}
+```
 
 ## Training
 
