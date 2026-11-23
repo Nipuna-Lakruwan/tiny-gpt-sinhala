@@ -95,7 +95,7 @@ h = x + \text{MHA}(\text{LN}(x)), \qquad y = h + \text{MLP}(\text{LN}(h))
 Training objective, next-token cross-entropy:
 
 ```math
-\mathcal L = -\frac{1}{T}\sum_{t=1}^{T} \log p_\theta(x_t \mid x_{<t})
+\mathcal L = -\frac{1}{T}\sum_{t=1}^{T} \log p_\theta(x_t \mid x_{\lt t})
 ```
 
 Bits per character, used to compare the two languages fairly (they have different tokens per character):
