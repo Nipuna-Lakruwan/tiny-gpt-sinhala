@@ -135,10 +135,6 @@ This is a 13.9M-parameter model trained for about one pass over 28M tokens: it l
 Wikipedia style, but its "facts" are often invented. Sinhala Wikipedia is small and has a lot of
 template-like articles (villages, years), and that shows in the samples. Data: Wikipedia, CC BY-SA 4.0.
 
-## Resume line
-
-> Built a GPT-style decoder-only Transformer (13.9M parameters) and a byte-level BPE tokenizer from scratch in PyTorch, trained on Sinhala + English Wikipedia on an 8 GB M1 laptop; found and fixed a GPT-2 pre-tokenizer bug that splits Sinhala words at every vowel sign (2.2× fewer Sinhala tokens), and reached 1.98 / 1.67 bits per character on held-out Sinhala / English text, against 2.37 / 2.16 for a bigram baseline.
-
 ## References
 
 - Vaswani et al., *Attention Is All You Need*, 2017.
